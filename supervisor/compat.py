@@ -57,7 +57,7 @@ else: # pragma: no cover
         if isinstance(s, str):
             return s
         else:
-            return s.decode(encoding)
+            return s.decode(encoding, errors='ignore')
 
     def is_text_stream(stream):
         import _io
