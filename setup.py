@@ -36,9 +36,9 @@ testing_extras = tests_require + [
 from setuptools import setup, find_packages
 here = os.path.abspath(os.path.dirname(__file__))
 try:
-    with open(os.path.join(here, 'README.rst'), 'r') as f:
+    with open(os.path.join(here, 'README.rst'), 'r', encoding="UTF-8") as f:
         README = f.read()
-    with open(os.path.join(here, 'CHANGES.rst'), 'r') as f:
+    with open(os.path.join(here, 'CHANGES.rst'), 'r', encoding="UTF-8") as f:
         CHANGES = f.read()
 except Exception:
     README = """\
@@ -71,7 +71,7 @@ with open(version_txt, 'r') as f:
     supervisor_version = f.read().strip()
 
 dist = setup(
-    name='supervisor',
+    name='supervisor-refined',
     version=supervisor_version,
     license='BSD-derived (http://www.repoze.org/LICENSE.txt)',
     url='http://supervisord.org/',
